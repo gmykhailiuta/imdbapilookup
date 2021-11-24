@@ -5,8 +5,8 @@ import sys
 import argparse
 from pprint import pprint
 
-user_id = os.getenv('OMDB_USER_ID')
-api_key = os.getenv('OMDB_API_KEY')
+user_id = os.getenv('IMDB_USER_ID')
+api_key = os.getenv('IMDB_API_KEY')
 url = "http://www.omdbapi.com/"
 
 
@@ -18,7 +18,7 @@ def lookup(movie_name: str, verbose: bool = False):
     }
     response_raw = requests.get(url, params=params)
     if response_raw.status_code != 200:
-        print("OMDB API returned code {}".format(response_raw.status_code))
+        print("IMDB API returned code {}".format(response_raw.status_code))
         sys.exit(1)
     response = response_raw.json()
 
@@ -46,7 +46,7 @@ def lookup(movie_name: str, verbose: bool = False):
 
 def main():
     if not (user_id and api_key):
-        print("Please, set both OMDB_USER_ID and OMDB_API_KEY environment variables")
+        print("Please, set both IMDB_USER_ID and IMDB_API_KEY environment variables")
         sys.exit(1)
 
     parser = argparse.ArgumentParser()

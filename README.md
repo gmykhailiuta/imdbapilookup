@@ -20,7 +20,7 @@ This repository contains a proof-of-concept for IMDB API lookup application.
 2. Run locally:
 
         source ./.venv/bin/activate
-        # Set environment variables OMDB_USER_ID and OMDB_API_KEY
+        # Set environment variables IMDB_USER_ID and IMDB_API_KEY
         # (check env.example)
         ./imdbapilookup.py "need for speed"
 
@@ -31,8 +31,8 @@ This repository contains a proof-of-concept for IMDB API lookup application.
 4. Run in docker:
         
         docker run -it \
-                -e "OMDB_API_KEY=${OMDB_API_KEY}" \
-                -e "OMDB_USER_ID=${OMDB_USER_ID}" \
+                -e "IMDB_API_KEY=${IMDB_API_KEY}" \
+                -e "IMDB_USER_ID=${IMDB_USER_ID}" \
                 imdbapi "Need for speed"
 
         # or

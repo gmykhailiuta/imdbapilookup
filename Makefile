@@ -15,8 +15,8 @@ build:
 
 run:
 	docker run -it \
-		-e "OMDB_API_KEY=${OMDB_API_KEY}" \
-		-e "OMDB_USER_ID=${OMDB_USER_ID}" \
+		-e "IMDB_API_KEY=${IMDB_API_KEY}" \
+		-e "IMDB_USER_ID=${IMDB_USER_ID}" \
 		imdbapi:$(VERSION) "$(MOVIE)"
 
 test:
