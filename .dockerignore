@@ -1,0 +1,6 @@
+Makefile
+.venv
+__pycache__
+/tests
+.env
+.gitignore
